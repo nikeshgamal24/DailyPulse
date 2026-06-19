@@ -1,0 +1,68 @@
+[
+  {
+    "id": "b24f93ab-2222-4821-abf9-1182f65d0219",
+    "title": "Write Q2 project proposal",
+    "subtasks": [
+      "Outline goals and scope",
+      "Draft budget estimate",
+      "Write timeline section",
+      "Get feedback from team lead"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-19T10:15:00",
+    "created_at": "2026-06-19T08:30:00"
+  },
+  {
+    "id": "92d06d49-7cd1-4914-80c2-29153fadbb3e",
+    "title": "Review pull requests for the API redesign",
+    "subtasks": [
+      "Check test coverage",
+      "Verify CORS configuration",
+      "Leave review comments",
+      "Approve or request changes"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-19T13:45:00",
+    "created_at": "2026-06-19T09:00:00"
+  },
+  {
+    "id": "d7a784be-92b4-4fe9-b62a-602230c4bfe1",
+    "title": "Plan team offsite agenda",
+    "subtasks": [
+      "List candidate activities",
+      "Draft schedule",
+      "Share with team for input"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-19T11:31:27.452756",
+    "created_at": "2026-06-19T11:00:00"
+  },
+  {
+    "id": "d0b91edd-e46e-49cf-b5e4-0011fda62745",
+    "title": "Plan a small birthday party",
+    "subtasks": [
+      "Decide core details: pick date & time, set a budget, estimate guest count, and create a guest list with an RSVP deadline.",
+      "Choose venue and theme/decor: select and reserve a location (home, park, or rented space) and pick a simple theme or color scheme.",
+      "Plan food & drinks: decide menu (including dietary restrictions), order cake/catering if needed, and make a shopping list for snacks, beverages, and ice.",
+      "Send invitations and track RSVPs: create and send digital or paper invites with RSVP date, then monitor responses and update the final headcount.",
+      "Prepare day-of logistics: buy decorations/partyware, create a timeline (arrival, cake, games), assign tasks to helpers, and confirm any orders/vendors 2\u20133 days beforehand."
+    ],
+    "completed": false,
+    "completed_at": null,
+    "created_at": "2026-06-19T12:00:16.930218"
+  },
+  {
+    "id": "eece04b8-9803-4718-9082-fb91e7d29c56",
+    "title": "Create awesome claude code app",
+    "subtasks": [
+      "Clarify app purpose and requirements: define core features, target users, platforms (web/mobile/desktop), success criteria, and any integrations (APIs, databases, authentication).",
+      "Design app architecture and UX: create wireframes/flow diagrams, choose tech stack (frontend, backend, hosting), define data models and API endpoints, and prepare a development roadmap with milestones. ",
+      "Develop core functionality and Claude integration: implement frontend UI, backend services, and integrate Claude API for required capabilities (prompt handling, streaming, rate limits, fallback), including unit tests and error handling. ",
+      "Implement supporting systems and polish: add authentication, persistence, logging/monitoring, billing (if applicable), accessibility, and responsive styling; perform end-to-end testing and bug fixes. ",
+      "Deploy and iterate: set up CI/CD, deploy to production, monitor usage and errors, collect user feedback, and plan iterative improvements and feature roadmap."
+    ],
+    "completed": false,
+    "completed_at": null,
+    "created_at": "2026-06-19T12:06:30.374761"
+  }
+]

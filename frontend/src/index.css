@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #1e1b2e;
+  --ink-soft: #6b6b80;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e5e4e7;
+  --indigo: #4f46e5;
+  --indigo-deep: #4338ca;
+  --coral: #fb7185;
+  --success: #16a34a;
+  --gradient-pulse: linear-gradient(90deg, var(--indigo), var(--coral));
+
+  --font-sans:
+    'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:
+    'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--bg);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+.font-mono-tight {
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+}
+
+.text-gradient-pulse {
+  background-image: var(--gradient-pulse);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Signature pulse line — draws itself once on mount via pathLength trick */
+.pulse-line path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: pulse-draw 1.4s 0.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes pulse-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise-in {
+  animation: rise-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-line path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .animate-rise-in {
+    animation: none;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
