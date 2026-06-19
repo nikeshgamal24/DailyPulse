@@ -74,7 +74,7 @@ def get_insights() -> dict:
 # outside any middleware added the normal way.
 app = CORSMiddleware(
     app=app,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
