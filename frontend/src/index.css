@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/*
+ * Design tokens — single source of truth for color primitives.
+ *
+ * Section accent contract: every major card picks ONE semantic accent
+ * token below for its icon badge + primary action color. Don't hardcode
+ * a new hex color in a component — add a token here and reference it via
+ * Tailwind arbitrary values instead, e.g.
+ *   bg-[var(--accent-purple)]/10 text-[var(--accent-purple)]
+ *
+ * Current section → accent mapping:
+ *   --accent-blue    Morning Briefing (quote)
+ *   --accent-purple  Smart Tasks, Standup Generator (focus tip)
+ *   --accent-orange  Daily Insights (today's message)
+ *
+ * See IconBadge.jsx — the `tone` prop maps 1:1 to these tokens, so any
+ * new card should reuse it rather than inventing a one-off badge style.
+ */
 :root {
   --ink: #1e1b2e;
   --ink-soft: #6b6b80;
@@ -11,6 +28,13 @@
   --coral: #fb7185;
   --success: #16a34a;
   --gradient-pulse: linear-gradient(90deg, var(--indigo), var(--coral));
+
+  --accent-blue: #2563eb;
+  --accent-blue-deep: #1d4ed8;
+  --accent-purple: #7c3aed;
+  --accent-purple-deep: #6d28d9;
+  --accent-orange: #ea580c;
+  --accent-orange-deep: #c2410c;
 
   --font-sans:
     'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;

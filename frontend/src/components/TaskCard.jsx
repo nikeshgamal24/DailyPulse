@@ -27,10 +27,10 @@ function TaskCard({ task, onComplete }) {
 
   return (
     <article
-      className={`animate-rise-in rounded-2xl border p-5 shadow-md transition-colors ${
+      className={`animate-rise-in rounded-2xl border border-l-4 p-5 shadow-md transition-colors ${
         task.completed
-          ? 'border-[var(--success)]/20 bg-[var(--success)]/[0.04]'
-          : 'border-[var(--border)] bg-white'
+          ? 'border-[var(--success)]/20 border-l-[var(--success)] bg-[var(--success)]/[0.04]'
+          : 'border-[var(--border)] border-l-[var(--indigo)]/50 bg-white'
       }`}
     >
       <div className="flex items-start gap-3">
