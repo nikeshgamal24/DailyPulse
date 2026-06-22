@@ -29,9 +29,13 @@ function StandupCard({ completedCount }) {
 
   const handleCopy = async () => {
     if (!standup) return
-    await navigator.clipboard.writeText(standup)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 1500)
+    try {
+      await navigator.clipboard.writeText(standup)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1500)
+    } catch {
+      setError('Could not copy to clipboard. Please copy manually.')
+    }
   }
 
   return (

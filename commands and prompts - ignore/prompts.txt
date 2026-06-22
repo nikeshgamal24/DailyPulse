@@ -210,16 +210,7 @@ Rules:
 - No commentary, no preamble
 
 
-
-Update the POST /tasks endpoint in backend/main.py to add a fallback:
-If the AI subtask generation fails for any reason, return the task
-with a single subtask: "Break this task down manually"
-
-Also add a POST /tasks/breakdown endpoint that accepts:
-{ "task_description": "string" }
-And returns a detailed breakdown from Claude — more detailed than the
-standard subtask generation, with time estimates for each subtask.
-
+c
 
 
 
