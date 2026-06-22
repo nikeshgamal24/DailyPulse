@@ -53,6 +53,30 @@ Known v4 patterns, for reference:
 
 These are v3-incompatible patterns — don't mix the two.
 
+## Theme System
+
+All colors live as CSS custom properties in `frontend/src/index.css`
+(`:root` block) — never hardcode a hex color in a component, add a token
+instead. Two token groups:
+
+- **Neutrals/brand:** `--ink`, `--ink-soft`, `--bg`, `--border`, `--indigo`,
+  `--indigo-deep`, `--coral`, `--success`. Used for body text, primary
+  buttons (Smart Tasks "Add Task", task "Complete Task"), and borders.
+- **Section accents:** `--accent-blue`, `--accent-purple`, `--accent-orange`
+  (each with a `-deep` hover variant). Each major card owns exactly one
+  accent, applied to its `IconBadge` and primary button:
+  - blue → Morning Briefing (quote column)
+  - purple → Smart Tasks, Standup Generator (also the briefing's focus-tip
+    column)
+  - orange → Daily Insights (also the briefing's today's-message column)
+
+`frontend/src/components/IconBadge.jsx` renders the small colored square
+next to each card title/column — pass it a `tone` prop (`blue` | `purple` |
+`orange`) and an inline SVG icon child rather than building a new badge
+style per component. When adding a new card or section, pick one of the
+three existing accents (don't add a fourth without updating both the
+`index.css` token comment block and this section).
+
 ## Code Standards
 
 - Python: type hints on all functions, docstrings on all public functions,
@@ -68,6 +92,7 @@ These are v3-incompatible patterns — don't mix the two.
 - backend/data/ — JSON storage (tasks.json, briefing.json)
 - frontend/src/App.jsx — main React component
 - frontend/src/components/ — React components directory
+- frontend/src/components/IconBadge.jsx — shared colored icon-badge used by every card header (see Theme System)
 - frontend/vite.config.js — Vite config with Tailwind plugin (see Tailwind CSS section for version)
 - frontend/src/index.css — global styles, starts with `@import "tailwindcss"`
 

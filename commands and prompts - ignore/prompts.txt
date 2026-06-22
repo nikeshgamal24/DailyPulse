@@ -132,6 +132,7 @@ The frontend looks good but needs some refinements:
 4. Fix any layout issues on the right panel — the two cards should have equal visual weight
 
 Make these changes without touching the API calls or business logic.
+Also make sure that you fix the the weight is the daily stand-up should also easily ro read through my task so to provide a better idea. 
 
 
 
